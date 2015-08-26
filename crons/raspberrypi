@@ -4,3 +4,5 @@
 #sync camera images every day at 1:00 and 9:00 (telenet daluren)
 00 01 * * * oliver /home/oliver/devops-home/scripts/raspberrypi/camera/moveToWebdav.sh &> /dev/null
 00 09 * * * oliver /home/oliver/devops-home/scripts/raspberrypi/camera/moveToWebdav.sh &> /dev/null
+00 22 * * * oliver /home/oliver/devops-home/scripts/wakeUpNas.sh && /home/oliver/devops-home/scripts/wakeUpHomeserver.sh  &> /dev/null
+00 07 * * * oliver /home/oliver/devops-home/scripts/shutdownHomeserver.sh && /home/oliver/devops-home/scripts/shutdownNas.sh  &> /dev/null
