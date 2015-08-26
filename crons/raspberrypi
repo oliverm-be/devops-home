@@ -1,0 +1,6 @@
+# m h dom mon dow user	command
+* * * * * oliver /home/oliver/devops-home/scripts/raspberrypi/camera/getImage.sh &> /dev/null
+* * * * * oliver /home/oliver/devops-home/scripts/raspberrypi/camera/moveToWebdav.sh &> /dev/null
+#sync camera images every day at 1:00 and 9:00 (telenet daluren)
+00 01 * * * oliver /home/oliver/devops-home/scripts/raspberrypi/camera/moveToWebdav.sh &> /dev/null
+00 09 * * * oliver /home/oliver/devops-home/scripts/raspberrypi/camera/moveToWebdav.sh &> /dev/null
